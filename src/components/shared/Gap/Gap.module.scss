@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  box-sizing: border-box;
+
+  &.growChildren {
+    > * {
+      flex-grow: 1;
+    }
+  }
+}
+
+.flexEnd {
+  box-sizing: border-box;
+  margin-left: auto;
+}

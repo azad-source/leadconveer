@@ -1,0 +1,17 @@
+@use 'variables' as *;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex-grow: 1;
+  box-sizing: border-box;
+
+  .content {
+    box-sizing: border-box;
+    padding: $page-side-gap;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+}
