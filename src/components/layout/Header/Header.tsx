@@ -3,15 +3,11 @@ import cx from 'clsx';
 import logo from '../../../assets/LOGO.png';
 import telegramIcon from '../../../assets/telegram_icon.png';
 import whatsappIcon from '../../../assets/whatsapp_icon.png';
+import type { MenuItem } from '../../../types/menu.types';
 import styles from './Header.module.scss';
 
 interface IProps {
   className?: string;
-}
-
-interface MenuItem {
-  caption: string;
-  link: string;
 }
 
 const menuConfig: MenuItem[] = [
