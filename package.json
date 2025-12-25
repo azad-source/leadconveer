@@ -6,10 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint:js": "eslint .",
+    "lint:css": "stylelint \"src/**/*.{css,scss}\"",
+    "lint": "yarn lint:js && yarn lint:css",
+    "prepare": "simple-git-hooks"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "normalize.css": "^8.0.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
@@ -22,9 +27,28 @@
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-storybook": "^10.1.10",
     "globals": "^16.5.0",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.4",
+    "sass": "^1.97.1",
+    "simple-git-hooks": "^2.13.1",
+    "storybook": "^10.1.10",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard-scss": "^16.0.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "yarn lint-staged"
+  },
+  "lint-staged": {
+    "*.scss": "stylelint",
+    "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write",
+    "*.{ts,tsx}": [
+      "eslint --fix"
+    ]
   }
 }
