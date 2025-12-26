@@ -1,4 +1,4 @@
-import StarIcon from 'assets/StarIcon.svg?react';
+import StarIcon from 'assets/GradientStarIcon.svg?react';
 import cx from 'clsx';
 
 import styles from './LeadsOfferSection.module.scss';
@@ -62,8 +62,8 @@ interface IOfferItemProps {
   data: IOfferData;
 }
 
-const OfferItem: React.FC<IOfferItemProps> = ({ data: item }) => {
-  const { title, text, image } = item;
+const OfferItem: React.FC<IOfferItemProps> = ({ data }) => {
+  const { title, text, image } = data;
   return (
     <div className={styles.offerCard}>
       <div className={styles.cardInfo}>
@@ -76,7 +76,6 @@ const OfferItem: React.FC<IOfferItemProps> = ({ data: item }) => {
       <div className={styles.cardImg}>
         <img src={image} />
       </div>
-      <div></div>
     </div>
   );
 };

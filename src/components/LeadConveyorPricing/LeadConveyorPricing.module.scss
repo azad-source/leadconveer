@@ -1,0 +1,123 @@
+@use 'variables' as *;
+
+.root {
+  .title {
+    text-align: center;
+    @include title-medium-bold;
+  }
+
+  .description p {
+    margin-top: 20px;
+    color: $grey;
+    text-align: center;
+    @include title-small;
+  }
+
+  .tariffs {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    .tariffCard {
+      border-radius: 30px;
+      background-color: $light-grey;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      padding: 40px;
+
+      &__tariff {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        .tariffName {
+          width: fit-content;
+          min-height: 58px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-sizing: border-box;
+          border-radius: 20px;
+          height: fit-content;
+          border: 1px solid $dark-grey;
+          padding: 0 20px;
+          padding-bottom: 4px;
+          line-height: 1;
+          @include title-small;
+        }
+
+        .starIcon {
+          width: 56px;
+          height: 56px;
+        }
+      }
+
+      &__price {
+        margin-top: 30px;
+        font-size: 36px;
+        line-height: 42px;
+        font-weight: bold;
+
+        .priceValue {
+          background: $gradient;
+          background-clip: text;
+          color: transparent !important;
+          font-weight: bold;
+          white-space: nowrap;
+        }
+      }
+
+      &__text {
+        margin-top: 20px;
+        color: $grey !important;
+        @include text-medium;
+      }
+
+      &__conditions {
+        margin-top: 30px;
+        margin-bottom: 40px;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          li {
+            display: flex;
+            gap: 16px;
+            align-items: baseline;
+            list-style: none;
+            @include text-medium;
+
+            &:nth-child(2) {
+              .condition {
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+
+      &__buyBtn {
+        margin-top: auto;
+      }
+
+      &:nth-child(even) {
+        background-color: $dark-grey;
+
+        .tariffCard__tariff {
+          .tariffName {
+            border-color: #fff;
+            background-color: rgba($color: #fff, $alpha: 10%);
+          }
+        }
+
+        * {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

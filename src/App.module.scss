@@ -3,4 +3,7 @@
 .content {
   margin: 0 auto;
   width: $min-content-width;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
 }

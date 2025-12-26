@@ -1,6 +1,7 @@
 import './App.module.scss';
 
 import styles from 'App.module.scss';
+import { LeadConveyorPricing } from 'components/LeadConveyorPricing/LeadConveyorPricing';
 import { LeadsOfferSection } from 'components/LeadsOfferSection/LeadsOfferSection';
 import { Gap } from 'components/shared/Gap/Gap';
 
@@ -14,6 +15,7 @@ function App() {
         <HeroSection />
         <div className={styles.content}>
           <LeadsOfferSection />
+          <LeadConveyorPricing />
         </div>
       </Gap>
     </Layout>
