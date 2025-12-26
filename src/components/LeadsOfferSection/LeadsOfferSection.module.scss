@@ -1,0 +1,60 @@
+@use 'variables' as *;
+
+.root {
+  .title {
+    text-align: center;
+    @include title-medium-bold;
+  }
+
+  .offers {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    .offerCard {
+      border-radius: 30px;
+      background-color: $light-grey;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+
+      .cardInfo {
+        width: 466px;
+        max-width: 466px;
+        padding: 60px 10px 60px 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &__title {
+          display: flex;
+          gap: 30px;
+          @include title-small;
+
+          .starIcon {
+            min-width: 44px;
+            min-height: 44px;
+          }
+        }
+
+        &__text {
+          color: $grey;
+          white-space: pre-line;
+          @include text-medium;
+        }
+      }
+
+      .cardImg {
+        width: 364px;
+        height: 100%;
+
+        img {
+          width: auto;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

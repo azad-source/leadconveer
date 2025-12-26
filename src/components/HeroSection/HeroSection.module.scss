@@ -11,7 +11,7 @@
 
   .wrapper {
     margin: 0 auto;
-    max-width: 1780px;
+    max-width: $min-content-width;
     box-sizing: border-box;
 
     .heroContent {
@@ -33,7 +33,7 @@
           color: #333;
 
           .highlight {
-            color: #ff6b00;
+            color: $brand-color;
             font-weight: bold;
           }
         }

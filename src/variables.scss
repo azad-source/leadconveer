@@ -10,8 +10,31 @@ $blueberry: #8a38d6;
 /** sizes */
 $page-side-gap: 40px;
 $plate-border-radius: 40px;
+$min-content-width: 1780px;
 
 @mixin font-family {
   font-family:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+@mixin highlighted {
+  .highlight {
+    color: $brand-color;
+  }
+}
+
+@mixin title-medium-bold {
+  font-size: 48px;
+  font-weight: bold;
+  @include highlighted;
+}
+
+@mixin title-small {
+  font-size: 32px;
+  @include highlighted;
+}
+
+@mixin text-medium {
+  font-size: 24px;
+  @include highlighted;
 }
