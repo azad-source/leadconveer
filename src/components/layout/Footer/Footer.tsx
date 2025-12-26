@@ -1,6 +1,6 @@
 import cx from 'clsx';
+import type { MenuItem } from 'types/menu.types';
 
-import type { MenuItem } from '../../../types/menu.types';
 import styles from './Footer.module.scss';
 
 interface IProps {

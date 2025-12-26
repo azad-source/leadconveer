@@ -1,9 +1,9 @@
+import logo from 'assets/LOGO.png';
+import telegramIcon from 'assets/telegram_icon.png';
+import whatsappIcon from 'assets/whatsapp_icon.png';
 import cx from 'clsx';
+import type { MenuItem } from 'types/menu.types';
 
-import logo from '../../../assets/LOGO.png';
-import telegramIcon from '../../../assets/telegram_icon.png';
-import whatsappIcon from '../../../assets/whatsapp_icon.png';
-import type { MenuItem } from '../../../types/menu.types';
 import styles from './Header.module.scss';
 
 interface IProps {
