@@ -168,6 +168,11 @@
             a {
               padding: 16px;
               font-size: 0.6rem;
+
+              &:hover {
+                transform: unset;
+                box-shadow: unset;
+              }
             }
           }
         }
