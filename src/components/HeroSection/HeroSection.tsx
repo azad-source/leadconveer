@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => {
                 Покупайте только целевые лиды
                 <br /> по фиксированной цене от 300 ₽
               </p>
-              <MoneyMouthFace width={72} height={72} />
+              <MoneyMouthFace className={styles.moneyMouthFaceIcon} />
             </div>
             <Button use='primary' width='100%' onClick={() => {}}>
               ВЫБРАТЬ ПАКЕТ ЛИДОВ

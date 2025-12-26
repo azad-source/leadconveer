@@ -1,9 +1,37 @@
 @use 'variables' as *;
 
-.content {
-  margin: 0 auto;
-  width: $min-content-width;
+.wrapper {
   display: flex;
   flex-direction: column;
   gap: 120px;
+  margin-bottom: 120px;
+  box-sizing: border-box;
+
+  .content {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: $min-content-width;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+  }
+}
+
+@media (width <= $min-content-width) {
+  .wrapper {
+    .content {
+      width: 100%;
+    }
+  }
+}
+
+@media (width <= 1400px) {
+  .wrapper {
+    gap: 2rem;
+    margin-bottom: 40px;
+
+    .content {
+      gap: 40px;
+    }
+  }
 }

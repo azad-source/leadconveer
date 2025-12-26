@@ -8,12 +8,13 @@
 
   .content {
     padding: 80px 20px;
-    color: #fff;
 
     .copyright,
     .legal {
       text-align: center;
-      font-size: 26px;
+      line-height: 1.5;
+      color: #fff;
+      @include text-medium;
     }
 
     .links {
@@ -46,6 +47,56 @@
               color: $grey2;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media (width <= 1024px) {
+  .root {
+    display: flex;
+    align-items: center;
+    border-radius: unset;
+    padding: 0 16px;
+
+    .content {
+      padding: 40px 0;
+
+      .copyright,
+      .legal {
+        @include text-small;
+      }
+
+      .links {
+        ul {
+          display: grid;
+          gap: 20px 50px;
+          grid-template-columns: repeat(2, 1fr);
+
+          li {
+            border: unset;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width <= 768px) {
+  .root {
+    display: block;
+
+    .content {
+      .copyright,
+      .legal {
+        @include text-tiny;
+      }
+
+      .links {
+        ul {
+          grid-template-columns: repeat(1, 1fr);
         }
       }
     }

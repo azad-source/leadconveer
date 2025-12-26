@@ -47,3 +47,13 @@ $min-content-width: 1780px;
   font-size: 24px;
   @include highlighted;
 }
+
+@mixin text-small {
+  font-size: 20px;
+  @include highlighted;
+}
+
+@mixin text-tiny {
+  font-size: 14px;
+  @include highlighted;
+}

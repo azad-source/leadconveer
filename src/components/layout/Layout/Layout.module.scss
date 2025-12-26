@@ -14,3 +14,11 @@
     flex: 1;
   }
 }
+
+@media (width <= 1900px) {
+  .root {
+    .content {
+      display: block;
+    }
+  }
+}

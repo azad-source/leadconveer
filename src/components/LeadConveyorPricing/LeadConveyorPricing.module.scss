@@ -121,3 +121,87 @@
     }
   }
 }
+
+@media (width <= 1900px) {
+  .root {
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    .title {
+      font-size: 1.2rem;
+    }
+
+    .description p {
+      font-size: 0.8rem;
+    }
+
+    .tariffs {
+      grid-template-columns: repeat(1, 1fr);
+
+      .tariffCard {
+        &__tariff {
+          .tariffName {
+            font-size: 0.8rem;
+          }
+
+          .starIcon {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
+
+        &__price {
+          font-size: 0.8rem;
+
+          .priceValue {
+            font-size: 0.8rem;
+          }
+        }
+
+        &__text {
+          font-size: 0.8rem;
+        }
+
+        &__conditions {
+          margin-top: 20px;
+          margin-bottom: 30px;
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            li {
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              list-style: none;
+              font-size: 0.7rem;
+
+              .checkIcon {
+                width: 0.7rem;
+                height: 0.7rem;
+              }
+
+              &:nth-child(2) {
+                .condition {
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width <= 480px) {
+  .root {
+    .tariffs {
+      .tariffCard {
+        padding: 20px;
+      }
+    }
+  }
+}
