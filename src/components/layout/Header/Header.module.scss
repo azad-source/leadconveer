@@ -1,8 +1,13 @@
 @use 'variables' as *;
 
 .root {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
   box-sizing: border-box;
   background-color: $dark-grey;
+  width: 100%;
   height: 82px;
   border-bottom-left-radius: $plate-border-radius;
   border-bottom-right-radius: $plate-border-radius;
@@ -35,7 +40,7 @@
           padding: 6px 30px;
           color: #fff;
           text-decoration: none;
-          font-size: 20px;
+          font-size: 24px;
           line-height: 1;
 
           &:hover,

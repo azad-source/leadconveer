@@ -1,0 +1,67 @@
+@use 'variables' as *;
+@use 'sass:color';
+
+// Цветовая палитра кнопки
+$btn-hue: color.channel($brand-color, 'hue', $space: hsl);
+$btn-saturation: 100%;
+$btn-lightness-base: 50%;
+$btn-lightness-hover: 45%;
+$btn-lightness-active: 40%;
+$btn-lightness-disabled: 70%;
+$btn-disabled-opacity: 0.6;
+
+.root {
+  margin: 0;
+  width: fit-content;
+  height: 72px;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 4px;
+  border: none;
+  outline-color: $brand-color-dark;
+  border-radius: 20px;
+  font-weight: 600;
+  @include font-family;
+
+  &.primary {
+    background-color: $brand-color;
+    color: #fff;
+
+    &:disabled {
+      background-color: hsl($btn-hue, $btn-saturation, $btn-lightness-disabled);
+      opacity: $btn-disabled-opacity;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: hsl($btn-hue, $btn-saturation, $btn-lightness-hover);
+    }
+
+    &:active:not(:disabled) {
+      background-color: hsl($btn-hue, $btn-saturation, $btn-lightness-active);
+    }
+  }
+
+  &.tiny {
+    font-size: 12px;
+  }
+
+  &.small {
+    font-size: 16px;
+  }
+
+  &.medium {
+    font-size: 24px;
+  }
+
+  &.large {
+    font-size: 28px;
+  }
+
+  &.extra-large {
+    font-size: 32px;
+  }
+}

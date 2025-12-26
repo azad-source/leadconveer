@@ -1,4 +1,5 @@
 /** colors */
+$brand-color-dark: #c74f00;
 $brand-color: #f60;
 $dark-grey: #2d2d2d;
 $light-grey: #f6f6f6;
@@ -9,3 +10,8 @@ $blueberry: #8a38d6;
 /** sizes */
 $page-side-gap: 40px;
 $plate-border-radius: 40px;
+
+@mixin font-family {
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
