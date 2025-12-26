@@ -34,13 +34,12 @@
 
         .tariffName {
           width: fit-content;
-          min-height: 58px;
+          height: 58px;
           display: flex;
           justify-content: center;
           align-items: center;
           box-sizing: border-box;
           border-radius: 20px;
-          height: fit-content;
           border: 1px solid $dark-grey;
           padding: 0 20px;
           padding-bottom: 4px;
@@ -142,7 +141,8 @@
       .tariffCard {
         &__tariff {
           .tariffName {
-            font-size: 0.8rem;
+            height: 1.8rem;
+            font-size: 0.7rem;
           }
 
           .starIcon {
@@ -160,17 +160,18 @@
         }
 
         &__text {
+          margin-top: 0.6rem;
           font-size: 0.8rem;
         }
 
         &__conditions {
-          margin-top: 20px;
-          margin-bottom: 30px;
+          margin-top: 0.8rem;
+          margin-bottom: 1rem;
 
           ul {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 0.8rem;
 
             li {
               display: flex;
