@@ -132,10 +132,11 @@
     }
 
     .description p {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
     }
 
     .tariffs {
+      margin-top: 0.8rem;
       grid-template-columns: repeat(1, 1fr);
 
       .tariffCard {
